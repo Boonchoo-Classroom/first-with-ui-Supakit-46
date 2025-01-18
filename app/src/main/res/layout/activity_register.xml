@@ -1,32 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
 
+    <!-- Title -->
     <TextView
-        android:id="@+id/registerHeaderText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register Page"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.117" />
+        android:text="Create Account"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:padding="20dp"
+        android:layout_marginBottom="30dp" />
 
+    <!-- Full Name Field -->
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Full Name"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="10dp" />
+
+    <!-- Email Field -->
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Email address"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="10dp" />
+
+    <!-- Phone Number Field -->
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="10dp" />
+
+    <!-- Password Field -->
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="10dp" />
+
+    <!-- Confirm Password Field -->
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="10dp" />
+
+
+    <!-- Terms and Conditions -->
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I agree to the Terms &amp; Conditions"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="@android:dimen/app_icon_size"/>
+
+    <!-- Sign Up Button -->
     <Button
-        android:id="@+id/registBackToMainBtn"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="SIGN UP"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/secondary"/>
+
+    <!-- Sign In Link -->
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
-        android:text="Back to Main"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="Already have an account? Login"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
